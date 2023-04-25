@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="atten.css">
+</head>
+<body>
+    <header><h2>Take Attendance</h2></header><br>
+    <button type="submit" onclick="window.location.href='home.html'">Back</button>
+    <main>
+        <div class="form-container">
+            <form action="/detect" method="post" enctype="multipart/form-data">
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required>
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+                <label for="image">Upload Photo:</label>
+            <button onclick="console.log('camera')"> </button>    <input hidden type="file" id="image" name="image" accept="image/*" required>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

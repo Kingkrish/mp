@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+
+<body>
+    <header>
+        <h1>Upload Student Details</h1>
+    </header>
+    <button type="submit" onclick="window.location.href='index.html'">Logout</button>
+    <main>
+        <div class="form-container">
+            <form action="/detect" method="post" enctype="multipart/form-data">
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required>
+                <label for="image">Upload File:</label>
+                <input type="file" id="image" name="image" accept="image/*" required>
+                <button type="submit">Submit</button>
+            </form>
+            <br><br><hr><br><br>
+            <div class="but">
+                <button type="button" onclick="window.location.href = 'atten.html';">Take Attendance</button>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
